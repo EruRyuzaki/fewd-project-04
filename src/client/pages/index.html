@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NLP</title>
+
+</head>
+
+<body>
+    
+    <header>
+
+        <nav class="nav">
+            <h1 class="logo">LOGO</h1>
+            <h1 class="navigation">NAV</h1>
+        </nav>
+        
+    </header>
+
+    <main>
+
+        <section>
+
+            <div class="section-grid">
+
+                <div class="grid-box">
+
+                    <form>
+                        <div class="inputs">
+                            <label for="url">INPUT URL:</label>
+                            <input id="url" class="url" type="url" placeholder="https://www.example.com">
+                            <div class="error" id="error"></div>
+                        </div>
+                        <div class="buttons">
+                            <button id="submit-btn" class="submit-btn" type="submit" onclick="client.submit(event)">SUBMIT</button>
+                            <button id="reset-btn" class="reset-btn" type="reset" onclick="client.reset(event)">RESET</button>
+                        </div>
+                    </form>
+
+                    <div class="outputs">
+                        <h1>INFORMATION:</h1>
+                        <div class="output-box">
+                            <div class="message-box">
+                                <div class="message right">MESSAGE:</div>
+                                <div id="message-output" class="message-output">-</div>
+                            </div>
+                            <div class="polarity-box">
+                                <div class="polarity right">POLARITY:</div>
+                                <div id="polarity-output" class="polarity-output">-</div>
+                            </div>
+                            <div class="agreement-box">
+                                <div class="agreement right">AGREEMENT:</div>
+                                <div id="agreement-output" class="agreement-output">-</div>
+                            </div>
+                            <div class="subjectivity-box">
+                                <div class="subjectivity right">SUBJECTIVITY:</div>
+                                <div id="subjectivity-output" class="subjectivity-output">-</div>
+                            </div>
+                            <div class="confidence-box">
+                                <div class="confidence right">CONFIDENCE:</div>
+                                <div id="confidence-output" class="confidence-output">-</div>
+                            </div>
+                            <div class="irony-box">
+                                <div class="irony right">IRONY:</div>
+                                <div id="irony-output" class="irony-output">-</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>CREATED BY ALAIN WALDISPUEHL</p>
+
+    </footer>
+
+    <script>
+
+        if ("serviceWorker" in navigator) {
+
+            window.addEventListener("load", () => {
+
+                navigator.serviceWorker.register("./service-worker.js");
+
+            });
+
+        }
+
+    </script>
+
+</body>
+
+</html>

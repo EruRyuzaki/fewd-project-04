@@ -1,0 +1,223 @@
+$color-black: hsla(0, 0%, 10%, 1);
+$color-white: hsla(0, 0%, 90%, 1);
+$color-green: hsla(120, 100%, 30%, 1);
+$color-red: hsla(0, 100%, 70%, 1);
+
+main {
+
+    margin: 0 auto 0 auto;
+    max-width: 200rem;
+
+    section {
+
+        min-height: calc(100vh - 15rem);
+        padding: 5rem 5vw 5rem 5vw;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+
+        .section-grid {
+
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            place-items: center;
+
+            .grid-box {
+
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                row-gap: 5rem;
+
+                form {
+
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    row-gap: 5rem;
+
+                    .inputs {
+
+                        position: relative;
+                        width: 80%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        row-gap: 1rem;
+
+                        label {
+
+                            color: $color-black;
+                            font-size: 2rem;
+                            font-weight: bold;
+
+                        }
+
+                        input {
+
+                            width: 100%;
+                            height: 5rem;
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            padding: 0 1rem 0 1rem;
+                            color: $color-black;
+                            font-size: 1.4rem;
+                            text-align: center;
+                            background-color: #ffffff;
+                            border: 3px solid $color-black;
+
+                        }
+
+                        .error {
+
+                            position: absolute;
+                            top: 100%;
+                            right: 0;
+                            left: 0;
+                            height: 3rem;
+                            color: $color-white;
+                            font-size: 1.3rem;
+                            font-weight: bold;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            align-items: center;
+                            background-color: $color-red;
+                            transform: scale(0);
+                            transform-origin: top;
+                            transition-property: transform;
+                            transition-timing-function: linear;
+                            transition-duration: 100ms;
+
+                            &.active {
+
+                                transform: scale(1);
+
+                            }
+
+                        }
+
+                    }
+
+                    .buttons {
+
+                        width: 80%;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        button {
+
+                            width: 47%;
+                            height: 5rem;
+                            color: $color-black;
+                            font-size: 1.4rem;
+                            font-weight: bold;
+                            border: 1px solid $color-black;
+                            box-shadow: 0 0 1rem 0 $color-black;
+                            cursor: pointer;
+                            transition-property: transform;
+                            transition-timing-function: linear;
+                            transition-duration: 100ms;
+
+                            &:hover {
+
+                                transform: scale(1.05);
+
+                            }
+
+                            &.submit-btn {
+
+                                background-color: $color-green;
+
+                            }
+
+                            &.reset-btn {
+
+                                background-color: $color-red;
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+                .outputs {
+
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    row-gap: 5rem;
+
+                    h1 {
+
+                        color: $color-black;
+                        font-size: 2rem;
+                        font-weight: bold;
+
+                    }
+
+                    .output-box {
+
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        row-gap: 1rem;
+
+                        > div {
+
+                            display: grid;
+                            grid-template-columns: repeat(2, 1fr);
+                            grid-template-rows: 1fr;
+                            column-gap: 5rem;
+                            color: $color-black;
+                            font-size: 1.3rem;
+                            text-transform: uppercase;
+
+                            @media (max-width: 425px) {
+
+                                grid-template-columns: 1fr;
+                                text-align: center;
+
+                            }
+
+                            .right {
+
+                                font-weight: normal;
+                                text-align: right;
+
+                                @media (max-width: 425px) {
+
+                                    text-align: center;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}

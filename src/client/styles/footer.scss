@@ -1,0 +1,31 @@
+$color-black: hsla(0, 0%, 10%, 1);
+$color-white: hsla(0, 0%, 90%, 1);
+
+footer {
+
+    position: relative;
+    min-height: 5rem;
+    background-color: $color-black;
+    display: grid;
+    place-items: center;
+
+    &::before {
+
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 3px;
+        background-color: #ffffff;
+
+    }
+
+    p {
+
+        color: $color-white;
+        font-size: 1rem;
+
+    }
+
+}

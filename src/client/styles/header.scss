@@ -1,0 +1,36 @@
+$color-black: hsla(0, 0%, 10%, 1);
+$color-white: hsla(0, 0%, 90%, 1);
+
+header {
+
+    background-color: $color-black;
+    box-shadow: 0 0 1rem 0 $color-black;
+
+    .nav {
+
+        min-height: 10rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        column-gap: 10rem;
+        padding: 0 5vw 0 5vw;
+
+        h1 {
+
+            color: $color-white;
+            font-size: 3rem;
+
+            &.logo {
+
+                font-weight: bold;
+                letter-spacing: 3px;
+
+            }
+
+        }
+
+    }
+
+}
